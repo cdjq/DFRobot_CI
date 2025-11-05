@@ -3,6 +3,9 @@ on:
   push:
     branches:
       - "**"   # 监听所有分支，避免分支名不匹配导致不触发
+    tags:
+        - "v*.*.*"   # 小写 v 触发
+        - "V*.*.*"   # 大写 V 触发
   pull_request:
   workflow_dispatch:  # 允许在 Actions 页面手动触发
 
